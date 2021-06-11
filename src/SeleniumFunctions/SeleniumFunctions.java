@@ -25,10 +25,10 @@ public class SeleniumFunctions {
 
     // Open URL in new tab
     public static void openUrlNewTab(String url) {
-        ((JavascriptExecutor) driver).executeScript("window.open()");
-        ArrayList<String> tabs = new ArrayList<String>(webDriver.getWindowHandles());
-        webDriver.switchTo().window(tabs.get(1)); //switches to new tab
-        webDriver.get(url);
+        ((JavascriptExecutor) driver).executeScript("window.open()");  // this will open the tab
+        ArrayList<String> tabs = new ArrayList<String>(webDriver.getWindowHandles()); // to handle the window
+        webDriver.switchTo().window(tabs.get(1)); //switch the focus to new tab index 1
+        webDriver.get(url); // get the URL
     }
 
 
